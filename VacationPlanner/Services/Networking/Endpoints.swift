@@ -38,7 +38,7 @@ extension Endpoint {
 		components.host = host
 		components.path = path
 
-		var queryItems = queryItems?.compactMap{ URLQueryItem(name: $0.key, value: $0.value) }
+		let queryItems = queryItems?.compactMap{ URLQueryItem(name: $0.key, value: $0.value) }
 
 		components.queryItems = queryItems
 

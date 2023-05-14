@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-final class NetworkingService: NetworkingProtocol {
+actor NetworkingService: NetworkingProtocol {
 
 	func downloadDataResult(from url: URL?) async -> Result<Data,Error> {
 
