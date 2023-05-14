@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7BC21CF2A10B62000972198 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC21CE2A10B62000972198 /* APIResponse.swift */; };
+		D7BC21D62A10C04400972198 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC21D22A10C04400972198 /* NetworkingError.swift */; };
+		D7BC21D72A10C04400972198 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC21D32A10C04400972198 /* NetworkingService.swift */; };
+		D7BC21D82A10C04400972198 /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC21D42A10C04400972198 /* NetworkingProtocol.swift */; };
+		D7BC21D92A10C04400972198 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC21D52A10C04400972198 /* NetworkMonitor.swift */; };
+		D7BC21DB2A10C1BC00972198 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC21DA2A10C1BC00972198 /* Endpoints.swift */; };
 		D7CDB3CD2A10B0DD0090AA8B /* VacationPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CDB3CC2A10B0DD0090AA8B /* VacationPlannerApp.swift */; };
 		D7CDB3CF2A10B0DD0090AA8B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CDB3CE2A10B0DD0090AA8B /* ContentView.swift */; };
 		D7CDB3D12A10B0E10090AA8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7CDB3D02A10B0E10090AA8B /* Assets.xcassets */; };
@@ -14,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D7BC21CE2A10B62000972198 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		D7BC21D22A10C04400972198 /* NetworkingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		D7BC21D32A10C04400972198 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		D7BC21D42A10C04400972198 /* NetworkingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
+		D7BC21D52A10C04400972198 /* NetworkMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		D7BC21DA2A10C1BC00972198 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		D7CDB3C92A10B0DD0090AA8B /* VacationPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VacationPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7CDB3CC2A10B0DD0090AA8B /* VacationPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationPlannerApp.swift; sourceTree = "<group>"; };
 		D7CDB3CE2A10B0DD0090AA8B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +44,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7BC21CC2A10B56D00972198 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC21D12A10C04400972198 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D7BC21CD2A10B57B00972198 /* Models  */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC21CE2A10B62000972198 /* APIResponse.swift */,
+			);
+			path = "Models ";
+			sourceTree = "<group>";
+		};
+		D7BC21D12A10C04400972198 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC21DA2A10C1BC00972198 /* Endpoints.swift */,
+				D7BC21D32A10C04400972198 /* NetworkingService.swift */,
+				D7BC21D42A10C04400972198 /* NetworkingProtocol.swift */,
+				D7BC21D52A10C04400972198 /* NetworkMonitor.swift */,
+				D7BC21D22A10C04400972198 /* NetworkingError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		D7CDB3C02A10B0DD0090AA8B = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +93,8 @@
 			children = (
 				D7CDB3CC2A10B0DD0090AA8B /* VacationPlannerApp.swift */,
 				D7CDB3CE2A10B0DD0090AA8B /* ContentView.swift */,
+				D7BC21CD2A10B57B00972198 /* Models  */,
+				D7BC21CC2A10B56D00972198 /* Services */,
 				D7CDB3D02A10B0E10090AA8B /* Assets.xcassets */,
 				D7CDB3D22A10B0E10090AA8B /* Preview Content */,
 			);
@@ -137,8 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7BC21D72A10C04400972198 /* NetworkingService.swift in Sources */,
 				D7CDB3CF2A10B0DD0090AA8B /* ContentView.swift in Sources */,
+				D7BC21CF2A10B62000972198 /* APIResponse.swift in Sources */,
+				D7BC21D82A10C04400972198 /* NetworkingProtocol.swift in Sources */,
+				D7BC21D62A10C04400972198 /* NetworkingError.swift in Sources */,
 				D7CDB3CD2A10B0DD0090AA8B /* VacationPlannerApp.swift in Sources */,
+				D7BC21DB2A10C1BC00972198 /* Endpoints.swift in Sources */,
+				D7BC21D92A10C04400972198 /* NetworkMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
