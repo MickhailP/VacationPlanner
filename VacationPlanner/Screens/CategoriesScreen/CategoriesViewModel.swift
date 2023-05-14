@@ -12,8 +12,12 @@ final class CategoriesViewModel: ObservableObject {
 
 	private let networkingService: NetworkingProtocol
 
-	@Published private(set) var categories: [Category] = []
-	@Published private(set) var allResortObjects: [Object] = []
+	@Published private(set) var resortObjectsWithCategory: [Category: [Object]] = [:]
+
+	var sortedCategoriesByCount: [Category] {
+		resortObjectsWithCategory.keys.sorted(by: { $0.count > $1.count })
+	}
+
 
 	// MARK: Alert tracker
 	@Published var showErrorMessage: Bool = false
@@ -51,13 +55,12 @@ final class CategoriesViewModel: ObservableObject {
 	private func decomposeAPIResponseFrom(_ data: Data) async {
 		do {
 			let decoder = JSONDecoder()
-//			decoder.keyDecodingStrategy = .convertFromSnakeCase
+			decoder.keyDecodingStrategy = .convertFromSnakeCase
 
 			let apiResponse = try decoder.decode(APIResponse.self, from: data)
 
 			await MainActor.run() {
-				categories = apiResponse.data.categories
-				allResortObjects = apiResponse.data.objects
+				 createResortDictionary(from: apiResponse)
 			}
 		} catch {
 			print(error)
@@ -65,6 +68,16 @@ final class CategoriesViewModel: ObservableObject {
 				showErrorMessage = true
 				errorMessage = error.localizedDescription
 			}
+		}
+	}
+
+
+	private func createResortDictionary(from apiResponse: APIResponse) {
+		let categories = apiResponse.data.categories
+		let allResortObjects = apiResponse.data.objects
+
+		categories.forEach { category in
+			resortObjectsWithCategory[category] = allResortObjects.filter { $0.type == category.type }
 		}
 	}
 }

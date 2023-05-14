@@ -14,6 +14,9 @@
 		D7BC21D92A10C04400972198 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC21D52A10C04400972198 /* NetworkMonitor.swift */; };
 		D7BC21DB2A10C1BC00972198 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC21DA2A10C1BC00972198 /* Endpoints.swift */; };
 		D7BC21DF2A10C84000972198 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC21DE2A10C84000972198 /* CategoriesViewModel.swift */; };
+		D7BC21E32A10E7A700972198 /* DetailCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC21E22A10E7A700972198 /* DetailCategoryViewModel.swift */; };
+		D7BC21E52A10E7C300972198 /* DetailCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC21E42A10E7C300972198 /* DetailCategoryView.swift */; };
+		D7BC21E82A10EADB00972198 /* ObjectRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC21E72A10EADB00972198 /* ObjectRowView.swift */; };
 		D7CDB3CD2A10B0DD0090AA8B /* VacationPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CDB3CC2A10B0DD0090AA8B /* VacationPlannerApp.swift */; };
 		D7CDB3CF2A10B0DD0090AA8B /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CDB3CE2A10B0DD0090AA8B /* CategoriesView.swift */; };
 		D7CDB3D12A10B0E10090AA8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7CDB3D02A10B0E10090AA8B /* Assets.xcassets */; };
@@ -29,6 +32,9 @@
 		D7BC21DA2A10C1BC00972198 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		D7BC21DE2A10C84000972198 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		D7BC21E02A10DAB300972198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D7BC21E22A10E7A700972198 /* DetailCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCategoryViewModel.swift; sourceTree = "<group>"; };
+		D7BC21E42A10E7C300972198 /* DetailCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCategoryView.swift; sourceTree = "<group>"; };
+		D7BC21E72A10EADB00972198 /* ObjectRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRowView.swift; sourceTree = "<group>"; };
 		D7CDB3C92A10B0DD0090AA8B /* VacationPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VacationPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7CDB3CC2A10B0DD0090AA8B /* VacationPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationPlannerApp.swift; sourceTree = "<group>"; };
 		D7CDB3CE2A10B0DD0090AA8B /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
@@ -79,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				D7BC21DD2A10C71200972198 /* CategoriesScreen */,
+				D7BC21E12A10E78300972198 /* DetailCategoryScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -90,6 +97,31 @@
 				D7BC21DE2A10C84000972198 /* CategoriesViewModel.swift */,
 			);
 			path = CategoriesScreen;
+			sourceTree = "<group>";
+		};
+		D7BC21E12A10E78300972198 /* DetailCategoryScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC21E42A10E7C300972198 /* DetailCategoryView.swift */,
+				D7BC21E22A10E7A700972198 /* DetailCategoryViewModel.swift */,
+			);
+			path = DetailCategoryScreen;
+			sourceTree = "<group>";
+		};
+		D7BC21E62A10EABD00972198 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC21E92A10EAFA00972198 /* Rows */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		D7BC21E92A10EAFA00972198 /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC21E72A10EADB00972198 /* ObjectRowView.swift */,
+			);
+			path = Rows;
 			sourceTree = "<group>";
 		};
 		D7CDB3C02A10B0DD0090AA8B = {
@@ -114,6 +146,7 @@
 				D7BC21E02A10DAB300972198 /* Info.plist */,
 				D7CDB3CC2A10B0DD0090AA8B /* VacationPlannerApp.swift */,
 				D7BC21DC2A10C70700972198 /* Screens */,
+				D7BC21E62A10EABD00972198 /* CustomViews */,
 				D7BC21CD2A10B57B00972198 /* Models  */,
 				D7BC21CC2A10B56D00972198 /* Services */,
 				D7CDB3D02A10B0E10090AA8B /* Assets.xcassets */,
@@ -200,15 +233,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7BC21E82A10EADB00972198 /* ObjectRowView.swift in Sources */,
 				D7BC21D72A10C04400972198 /* NetworkingService.swift in Sources */,
 				D7CDB3CF2A10B0DD0090AA8B /* CategoriesView.swift in Sources */,
 				D7BC21CF2A10B62000972198 /* APIResponse.swift in Sources */,
 				D7BC21D82A10C04400972198 /* NetworkingProtocol.swift in Sources */,
 				D7BC21D62A10C04400972198 /* NetworkingError.swift in Sources */,
 				D7CDB3CD2A10B0DD0090AA8B /* VacationPlannerApp.swift in Sources */,
+				D7BC21E32A10E7A700972198 /* DetailCategoryViewModel.swift in Sources */,
 				D7BC21DB2A10C1BC00972198 /* Endpoints.swift in Sources */,
 				D7BC21DF2A10C84000972198 /* CategoriesViewModel.swift in Sources */,
 				D7BC21D92A10C04400972198 /* NetworkMonitor.swift in Sources */,
+				D7BC21E52A10E7C300972198 /* DetailCategoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +301,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -319,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -341,6 +377,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VacationPlanner/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -370,6 +407,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VacationPlanner/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
