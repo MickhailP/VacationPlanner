@@ -26,7 +26,7 @@ struct DataClass: Codable {
 
 
 // MARK: - Category
-struct Category: Codable, Identifiable {
+struct Category: Codable, Identifiable, Hashable {
 	let id = UUID()
 	let name, type, icon, color: String
 	let count: Int
@@ -44,7 +44,7 @@ struct GeoCoordinates: Codable {
 
 
 // MARK: - Object
-struct Object: Codable {
+struct Object: Codable, Identifiable  {
 	let id: Int
 	let name: String
 	let description: String
@@ -52,11 +52,13 @@ struct Object: Codable {
 	let type, icon, color: String
 	let lat, lon: Double
 	let workingHours: [WorkingHour]?
+
+	static let example = Object(id: 1, name: "Cave", description: "Here is some description. lsaoda r,amsld o osndoall maodmrunndia sand ja!", image: "https://rsttur.ru/file/60c8769ba602f.jpeg", type: "shop", icon: "rst-surprise", color: "success-10", lat: 42.6, lon: 131.1, workingHours: nil)
 }
 
 
 // MARK: - WorkingHour
-struct WorkingHour: Codable {
+struct WorkingHour: Codable{
 	let days: [Int]
 	let from, to: String
 }

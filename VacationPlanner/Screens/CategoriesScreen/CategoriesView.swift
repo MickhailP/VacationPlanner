@@ -17,9 +17,11 @@ struct CategoriesView: View {
 
     var body: some View {
 		NavigationView {
-			List(viewModel.categories) { category in
+			List(viewModel.sortedCategoriesByCount) { category in
 				NavigationLink {
-					//CategoryDetailView here
+					if let objects = viewModel.resortObjectsWithCategory[category] {
+						DetailCategoryView(viewModel: DetailCategoryViewModel(objects: objects))
+					}
 				} label: {
 					rowLabelFor(category)
 				}
@@ -28,6 +30,7 @@ struct CategoriesView: View {
 		}
     }
 }
+
 
 extension CategoriesView {
 	private func rowLabelFor(_ category: Category) -> some View {
@@ -41,6 +44,7 @@ extension CategoriesView {
 		}
 	}
 }
+
 
 struct CategoriesScreen_Previews: PreviewProvider {
     static var previews: some View {

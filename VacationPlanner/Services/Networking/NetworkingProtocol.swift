@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol NetworkingProtocol {
+protocol NetworkingProtocol: AnyObject {
 	func downloadDataResult(from url: URL?) async -> Result<Data,Error>
 	func fetchImage(from urlString: String) async -> UIImage?
 }
