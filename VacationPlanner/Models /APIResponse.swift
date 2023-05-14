@@ -26,9 +26,14 @@ struct DataClass: Codable {
 
 
 // MARK: - Category
-struct Category: Codable {
+struct Category: Codable, Identifiable {
+	let id = UUID()
 	let name, type, icon, color: String
 	let count: Int
+
+	enum CodingKeys: CodingKey {
+		case name, type, icon, color, count
+	}
 }
 
 
@@ -41,11 +46,12 @@ struct GeoCoordinates: Codable {
 // MARK: - Object
 struct Object: Codable {
 	let id: Int
-	let name, description: String
+	let name: String
+	let description: String
 	let image: String
 	let type, icon, color: String
 	let lat, lon: Double
-	let workingHours: [WorkingHour]
+	let workingHours: [WorkingHour]?
 }
 
 
