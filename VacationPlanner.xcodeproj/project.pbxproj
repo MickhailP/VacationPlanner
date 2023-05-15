@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		D7B4EA292A1221AD008A8031 /* ObjectCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B4EA282A1221AD008A8031 /* ObjectCounterView.swift */; };
-		D7B4EA2C2A1221DD008A8031 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B4EA2B2A1221DD008A8031 /* CustomColors.swift */; };
 		D7B4EA2F2A123EC0008A8031 /* UIColorEXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B4EA2E2A123EC0008A8031 /* UIColorEXT.swift */; };
 		D7B4EA332A1260FC008A8031 /* DetailCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B4EA312A1260FC008A8031 /* DetailCategoryViewModel.swift */; };
 		D7B4EA342A1260FC008A8031 /* DetailCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B4EA322A1260FC008A8031 /* DetailCategoryView.swift */; };
 		D7B4EA372A12611C008A8031 /* ObjectRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B4EA362A12611C008A8031 /* ObjectRowView.swift */; };
+		D7B4EA3B2A126317008A8031 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B4EA3A2A126317008A8031 /* CategoriesView.swift */; };
+		D7B4EA3D2A12632D008A8031 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B4EA3C2A12632D008A8031 /* CustomColors.swift */; };
 		D7BC21CF2A10B62000972198 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC21CE2A10B62000972198 /* APIResponse.swift */; };
 		D7BC21D62A10C04400972198 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC21D22A10C04400972198 /* NetworkingError.swift */; };
 		D7BC21D72A10C04400972198 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC21D32A10C04400972198 /* NetworkingService.swift */; };
@@ -21,18 +22,18 @@
 		D7BC21DB2A10C1BC00972198 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC21DA2A10C1BC00972198 /* Endpoints.swift */; };
 		D7BC21DF2A10C84000972198 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC21DE2A10C84000972198 /* CategoriesViewModel.swift */; };
 		D7CDB3CD2A10B0DD0090AA8B /* VacationPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CDB3CC2A10B0DD0090AA8B /* VacationPlannerApp.swift */; };
-		D7CDB3CF2A10B0DD0090AA8B /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CDB3CE2A10B0DD0090AA8B /* CategoriesView.swift */; };
 		D7CDB3D12A10B0E10090AA8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7CDB3D02A10B0E10090AA8B /* Assets.xcassets */; };
 		D7CDB3D42A10B0E10090AA8B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7CDB3D32A10B0E10090AA8B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D7B4EA282A1221AD008A8031 /* ObjectCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectCounterView.swift; sourceTree = "<group>"; };
-		D7B4EA2B2A1221DD008A8031 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		D7B4EA2E2A123EC0008A8031 /* UIColorEXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorEXT.swift; sourceTree = "<group>"; };
 		D7B4EA312A1260FC008A8031 /* DetailCategoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCategoryViewModel.swift; sourceTree = "<group>"; };
 		D7B4EA322A1260FC008A8031 /* DetailCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCategoryView.swift; sourceTree = "<group>"; };
 		D7B4EA362A12611C008A8031 /* ObjectRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectRowView.swift; sourceTree = "<group>"; };
+		D7B4EA3A2A126317008A8031 /* CategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		D7B4EA3C2A12632D008A8031 /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		D7BC21CE2A10B62000972198 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		D7BC21D22A10C04400972198 /* NetworkingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		D7BC21D32A10C04400972198 /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		D7BC21E02A10DAB300972198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D7CDB3C92A10B0DD0090AA8B /* VacationPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VacationPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7CDB3CC2A10B0DD0090AA8B /* VacationPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationPlannerApp.swift; sourceTree = "<group>"; };
-		D7CDB3CE2A10B0DD0090AA8B /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		D7CDB3D02A10B0E10090AA8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7CDB3D32A10B0E10090AA8B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,7 +78,7 @@
 		D7B4EA2D2A123EAD008A8031 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				D7B4EA2B2A1221DD008A8031 /* CustomColors.swift */,
+				D7B4EA3C2A12632D008A8031 /* CustomColors.swift */,
 				D7B4EA2E2A123EC0008A8031 /* UIColorEXT.swift */,
 			);
 			path = Colors;
@@ -143,7 +143,7 @@
 		D7BC21DD2A10C71200972198 /* CategoriesScreen */ = {
 			isa = PBXGroup;
 			children = (
-				D7CDB3CE2A10B0DD0090AA8B /* CategoriesView.swift */,
+				D7B4EA3A2A126317008A8031 /* CategoriesView.swift */,
 				D7BC21DE2A10C84000972198 /* CategoriesViewModel.swift */,
 			);
 			path = CategoriesScreen;
@@ -269,14 +269,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7BC21D72A10C04400972198 /* NetworkingService.swift in Sources */,
-				D7CDB3CF2A10B0DD0090AA8B /* CategoriesView.swift in Sources */,
-				D7B4EA2C2A1221DD008A8031 /* CustomColors.swift in Sources */,
+				D7B4EA3D2A12632D008A8031 /* CustomColors.swift in Sources */,
 				D7BC21CF2A10B62000972198 /* APIResponse.swift in Sources */,
 				D7B4EA332A1260FC008A8031 /* DetailCategoryViewModel.swift in Sources */,
 				D7B4EA292A1221AD008A8031 /* ObjectCounterView.swift in Sources */,
 				D7BC21D82A10C04400972198 /* NetworkingProtocol.swift in Sources */,
 				D7B4EA372A12611C008A8031 /* ObjectRowView.swift in Sources */,
 				D7BC21D62A10C04400972198 /* NetworkingError.swift in Sources */,
+				D7B4EA3B2A126317008A8031 /* CategoriesView.swift in Sources */,
 				D7CDB3CD2A10B0DD0090AA8B /* VacationPlannerApp.swift in Sources */,
 				D7BC21DB2A10C1BC00972198 /* Endpoints.swift in Sources */,
 				D7B4EA342A1260FC008A8031 /* DetailCategoryView.swift in Sources */,
