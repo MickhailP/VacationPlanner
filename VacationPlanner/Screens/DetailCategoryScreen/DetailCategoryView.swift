@@ -17,13 +17,12 @@ struct DetailCategoryView: View {
 	}
 
 
-
 	var body: some View {
 		List {
-			ForEach(viewModel.objects) { object in
+			ForEach(viewModel.sortedObjects) { object in
 				createRowFor(object)
 					.onTapGesture {
-						viewModel.goTo(lat: object.lat, long: object.lon)
+						viewModel.makeRouteTo(lat: object.lat, long: object.lon)
 					}
 
 			}
@@ -31,12 +30,18 @@ struct DetailCategoryView: View {
 		.navigationTitle("Объекты")
 		.navigationBarTitleDisplayMode(.large)
 		.listStyle(.plain)
+		.toolbar {
+			ToolbarItem(placement: .navigationBarTrailing) {
+				sorterMenu
+			}
+		}
     }
 }
 
 
 extension DetailCategoryView {
 
+//MARK: - ObjectRowView
 	@ViewBuilder func createRowFor(_ object: Object) -> some View {
 		if #available(iOS 16.0, *) {
 			ObjectRowView(object: object)
@@ -49,6 +54,24 @@ extension DetailCategoryView {
 				.padding(.horizontal)
 		}
 	}
+
+
+//MARK: - Sorter Menu
+	private var sorterMenu: some View {
+		Menu{
+			Button("By name") {
+				viewModel.sorter = .byName
+			}
+			Button("Default") {
+				viewModel.sorter = .none
+			}
+		} label: {
+			HStack {
+				Image(systemName: "arrow.up.arrow.down")
+				Text("Sort")
+			}
+		}
+	}
 }
 
 struct DetailCategoryScreen_Previews: PreviewProvider {
@@ -56,6 +79,8 @@ struct DetailCategoryScreen_Previews: PreviewProvider {
 
 		let objects = Array(repeating: Object.example, count: 5)
 
-		DetailCategoryView(viewModel: DetailCategoryViewModel(objects: objects))
+		NavigationView {
+			DetailCategoryView(viewModel: DetailCategoryViewModel(objects: objects))
+		}
 	}
 }

@@ -39,7 +39,7 @@ extension CategoriesView {
 				.font(.headline)
 			Spacer()
 
-			ObjectCounterView(count: category.count, colorHex: CustomColors.colorsDictionary[category.color] ?? "#00000")
+			ObjectCounterView(count: category.count, colorHex: CustomColors.colorsDictionary[category.color] ?? "#000000")
 		}
 	}
 }

@@ -10,13 +10,30 @@ import UIKit
 
 final class DetailCategoryViewModel: ObservableObject {
 
-	@Published var objects: [Object]
+	@Published private var objects: [Object]
+	@Published var sorter = SortType.none
+
 
 	init(objects: [Object]) {
 		self.objects = objects
 	}
 
-	func goTo(lat: Double, long: Double) {
+
+	enum SortType{
+		case none, byName
+	}
+
+	var sortedObjects: [Object] {
+		switch sorter {
+			case .none:
+				return objects
+			case .byName:
+				return objects.sorted(by: sortByName)
+		}
+	}
+
+
+	func makeRouteTo(lat: Double, long: Double) {
 
 		guard let routeURL = URL(string: "dgis://2gis.ru/routeSearch/rsType/car/to/\(long),\(lat)") else {
 			print("bad url 1")
@@ -35,6 +52,11 @@ final class DetailCategoryViewModel: ObservableObject {
 
 			application.open(iTunesURL)
 		}
+	}
+
+
+	private func sortByName(_ lhs: Object, _ rhs: Object) -> Bool {
+		lhs.name < rhs.name
 	}
 }
 

@@ -30,6 +30,7 @@ struct ObjectRowView: View {
 				Text(object.name)
 					.font(.title3)
 
+
 				Text(object.description)
 					.font(.subheadline)
 					.lineLimit(2)
