@@ -39,8 +39,7 @@ extension CategoriesView {
 				.font(.headline)
 			Spacer()
 
-			Text("\(category.count)")
-
+			ObjectCounterView(count: category.count, colorHex: CustomColors.colorsDictionary[category.color] ?? "#00000")
 		}
 	}
 }
