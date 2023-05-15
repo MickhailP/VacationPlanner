@@ -11,8 +11,7 @@ import SwiftUI
 struct VacationPlannerApp: App {
     var body: some Scene {
         WindowGroup {
-			CategoriesView(viewModel: CategoriesViewModel(networkingService: NetworkingService()))
-				.preferredColorScheme(.dark)
+            ContentView()
         }
     }
 }
